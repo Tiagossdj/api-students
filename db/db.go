@@ -42,7 +42,7 @@ func (s *StudentHandler) GetStudents() ([]schemas.Student, error) {
 	return students, err
 }
 
-func (s *StudentHandler) GetFilteredStudents(active bool) ([]schemas.Student, error) {
+func (s *StudentHandler) GetFilteredStudent(active bool) ([]schemas.Student, error) {
 	filteredStudents := []schemas.Student{}
 	err := s.DB.Where("active = ?", active).Find(&filteredStudents)
 	return filteredStudents, err.Error

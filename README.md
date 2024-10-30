@@ -8,7 +8,8 @@ Routes:
 - POST /students - Create student;
 - GET /students/:id - Get student info;
 - PUT /students/:id - Update student;
-- DELETE /students/:id - Delete student.
+- DELETE /students/:id - Delete student
+- GET /students?active=<true/false> - List all active/non-active students
 
 Struct student:
 - Name string
